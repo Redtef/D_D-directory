@@ -1,14 +1,16 @@
-# Create React App
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+## Developer Dao Minim
 
-## Deploy Your Own
+TODO 
+- add a small explanation below the divider to explain what is it
+- write down the process to be done (merge request process to get your name on it)
+- if needed there needs to be a small guide on how to :
+    - what is git and why is it used
+    - install git 
+    - create a github account 
+    - what are forks , branches , commits
 
-Deploy your own Create React App project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
-
-_Live Example: https://create-react-template.vercel.app/_
+- things need to look a lil bit better visually 
 
 ## Available Scripts
 

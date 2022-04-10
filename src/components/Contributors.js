@@ -22,7 +22,7 @@ export default function Contributors() {
   };
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   return (
     <div>

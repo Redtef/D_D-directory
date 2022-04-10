@@ -9,6 +9,11 @@ body {
   padding-top: 2.5rem;
   margin-inline-start: auto;
   margin-left: 8rem;
+  margin-right: 8rem;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  -webkit-padding-end: 1rem;
+  padding-inline-end: 1rem;
 }
 
 code {
