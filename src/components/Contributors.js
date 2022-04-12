@@ -22,11 +22,12 @@ export default function Contributors() {
   };
   useEffect(() => {
     getData();
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div>
-      <ul>
+      {/* <ul>
         {contributors &&
           contributors.map((contributor) => (
             <li>
@@ -37,7 +38,19 @@ export default function Contributors() {
               {contributor.discord}
             </li>
           ))}
-      </ul>
+      </ul> */}
+
+      <div className="container">
+        {contributors &&
+          contributors.map((contributor, index) => (
+            <div key={index} className="container-item">
+              {contributor.name}
+              <IconOpenSea />#{contributor.NFT}
+              <IconDiscord />
+              {contributor.discord}
+            </div>
+          ))}
+      </div>
     </div>
   );
 }

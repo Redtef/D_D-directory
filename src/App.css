@@ -24,6 +24,7 @@
 .divider {
   border-radius: 0.125rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   align-self: stretch;
   border-color: inherit;
   width: auto;
@@ -38,4 +39,15 @@
     #b794f4,
     #f687b3
   );
+}
+
+/* .container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+} */
+.container-item{
+display: flex ;
+justify-content: space-around;
 }
