@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import IconOpenSea from './IconOpenSea';
 import IconDiscord from './IconDiscord';
+import IconDevDao from './IconDevDao';
 export default function Contributors() {
   const [contributors, setContributorsList] = useState([]);
 
@@ -26,18 +27,25 @@ export default function Contributors() {
 
   return (
     <div>
-      <ul>
-        {contributors &&
-          contributors.map((contributor) => (
-            <li>
-              {contributor.name}
-              <IconOpenSea />
-              {contributor.NFT}
-              <IconDiscord />
-              {contributor.discord}
-            </li>
-          ))}
-      </ul>
+      <table>
+        <tbody>
+          {contributors &&
+            contributors.map((contributor, index) => (
+              <tr>
+                <td width={'3rem'}>
+                  <IconDevDao />
+                </td>
+                <td>{contributor.name}</td>
+                <td>
+                  <IconOpenSea /> {contributor.NFT}
+                </td>
+                <td>
+                  <IconDiscord /> {contributor.discord}
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </table>
     </div>
   );
 }
