@@ -30,20 +30,18 @@ export default function Contributors() {
         <tbody>
           {all &&
             all.map((contributor, index) => (
-              <div>
-                <tr>
-                  <td width={'3rem'}>
-                    <IconDevDao />
-                  </td>
-                  <td>{contributor.name}</td>
-                  <td>
-                    <IconOpenSea /> {contributor.NFT}
-                  </td>
-                  <td>
-                    <IconDiscord /> {contributor.discord}
-                  </td>
-                </tr>
-              </div>
+              <tr key={contributor.discord}>
+                <td width={'3rem'}>
+                  <IconDevDao />
+                </td>
+                <td>{contributor.name}</td>
+                <td>
+                  <IconOpenSea /> {contributor.NFT}
+                </td>
+                <td>
+                  <IconDiscord /> {contributor.discord}
+                </td>
+              </tr>
             ))}
         </tbody>
       </table>
