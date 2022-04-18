@@ -4,45 +4,46 @@ import IconOpenSea from './IconOpenSea';
 import IconDiscord from './IconDiscord';
 import IconDevDao from './IconDevDao';
 export default function Contributors() {
-  const [contributors, setContributorsList] = useState([]);
+  const [all, setAll] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
-  const getData = () => {
-    fetch('contributors/contributors.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setContributorsList(data);
-        console.log(contributors);
-      });
-  };
+  const callData = () => {
+    const context = require.context('../../public/contributors', true, /.json$/);
+    context.keys().forEach((key) => {
+      const fileName = key.replace('./', '');
+      const resource = require(`../../public/contributors/${fileName}`);
+      all.push(JSON.parse(JSON.stringify(resource)));
+    });
+  }
+
   useEffect(() => {
-    getData();
+    if(dataLoaded === false){
+      callData();
+      setDataLoaded(true);
+    }
+    console.log(all);
   }, []);
 
   return (
     <div>
       <table>
         <tbody>
-          {contributors &&
-            contributors.map((contributor, index) => (
-              <tr>
-                <td width={'3rem'}>
-                  <IconDevDao />
-                </td>
-                <td>{contributor.name}</td>
-                <td>
-                  <IconOpenSea /> {contributor.NFT}
-                </td>
-                <td>
-                  <IconDiscord /> {contributor.discord}
-                </td>
-              </tr>
+          {all &&
+            all.map((contributor, index) => (
+              <div>
+                <tr>
+                  <td width={'3rem'}>
+                    <IconDevDao />
+                  </td>
+                  <td>{contributor.name}</td>
+                  <td>
+                    <IconOpenSea /> {contributor.NFT}
+                  </td>
+                  <td>
+                    <IconDiscord /> {contributor.discord}
+                  </td>
+                </tr>
+              </div>
             ))}
         </tbody>
       </table>
