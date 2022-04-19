@@ -8,16 +8,20 @@ export default function Contributors() {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   const callData = () => {
-    const context = require.context('../../public/contributors', true, /.json$/);
+    const context = require.context(
+      '../../public/contributors',
+      true,
+      /.json$/,
+    );
     context.keys().forEach((key) => {
       const fileName = key.replace('./', '');
       const resource = require(`../../public/contributors/${fileName}`);
       all.push(JSON.parse(JSON.stringify(resource)));
     });
-  }
+  };
 
   useEffect(() => {
-    if(dataLoaded === false){
+    if (dataLoaded === false) {
       callData();
       setDataLoaded(true);
     }
