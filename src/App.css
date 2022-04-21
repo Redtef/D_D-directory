@@ -13,6 +13,10 @@
   color: #61dafb;
 }
 
+.contributor-container {
+  min-height: 35vh;
+}
+
 .content {
   display: flex;
   flex-direction: column;

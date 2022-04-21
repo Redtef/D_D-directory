@@ -1,23 +1,18 @@
 
 ## Developer Dao Minimum Viable Contribution 
 
-TODO list
-- add a small explanation below the divider to explain what is it
-- needs a footer
-
-- things need to look a lil bit better visually 
-- next steps after finishing this task (add your own touch , change the front end stuff etc..)
-
-
 # Table of contents
+- [What is this ?](#what-is-this)
 - How to contribute
     - [If you are not familiar with git and github](#not-familiar-with-git-and-github)
     - [If you are familiar with git and github](#familiar-with-git-and-github)
 - [Run this project](#available-scripts)
 - [Definitions](#definitions)
-## How to contribute ? 
 
--------
+## What is this ? 
+
+This repository serves as a Miminum Viable Contribution for every member of [Developer DAO](https://www.developerdao.com/), where people from all levels of proficiency can contribute in a small but meaningful way and add their presence to the public list of Developer DAO members.
+## How to contribute ? 
 ### Not Familiar with Git and Github 
 
 If you are familiar with how Git & Github works , or would like to test another way of doing things , click [here](#familiar-with-git-and-github) 
@@ -148,3 +143,10 @@ Launches the test runner in the interactive watch mode. See the section about [r
 Builds the app for production to the `build` folder.
 
 It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+
+
+TODO list
+- add a small explanation below the divider to explain what is it
+- needs a footer
+- things need to look a lil bit better visually 
+- next steps after finishing this task (add your own touch , change the front end stuff etc..)

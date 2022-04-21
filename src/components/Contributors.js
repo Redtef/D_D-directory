@@ -29,7 +29,7 @@ export default function Contributors() {
   }, []);
 
   return (
-    <div>
+    <div className="contributor-container">
       <table>
         <tbody>
           {all &&

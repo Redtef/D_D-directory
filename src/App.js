@@ -18,6 +18,9 @@ function App() {
         <InfoContainer />
       </div>
       <Contributor />
+      {/* <div className="footer">
+        <Divider />
+      </div> */}
     </div>
   );
 }
